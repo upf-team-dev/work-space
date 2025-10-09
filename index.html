@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="index.js"></script>
@@ -71,5 +72,177 @@
             <a href="#">展示施設</a> 
             <a href="#">よくある質問</a>
         </div>
-   </body>
+<!DOCTYPE "html">
+<html>
+<head>
+    <title>メインコンテンツ</title>
+</head>
+<body>
+    <div class="main-contents">
+    <div class="container">
+        <div class="row">
+            <h1 class="col pt-3 mb-1 text-center">新着情報</h1>
+        </div>
+        <div id="news" class="row mb-3 p-1 ">
+
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="col pt-3 pb-1 text-center">イベント</h1>
+        <article class="row">
+             <div class ="event-discription col-12 col-lg-4 order-1 order-lg-2 d-lg-flex flex-lg-column">
+                <div class = "col-12 order-1 order-lg-2" >
+                    <h3 class="card-title text-center py-3">ダイナミック イルカショー</h3>
+                    <h5 class="card-text">大阪マリンワールドの名物といえばコレ、ゲスト参加型のイルカショーです。大迫力のパフォーマンスをぜひご覧ください！！</h5>
+                    <div class="d-flex justify-content-center justify-content-md-end py-2 pr-2">
+                        <button type="button" class="btn btn-block btn-lg-large  text-white" onclick="location.href='#'">もっと見る</button>
+                    </div>
+                </div>
+                <div class="event-image col-12 order-2 order-lg-1">
+                    <img src="penguin.jpg" class="rounded-lg mb-3 img-fluid" alt="...">
+                </div>
+            </div>
+            <div class="event-image col-12 col-lg-8 order-3 order-lg-1 ">
+                <img src="dolphin.png" class="rounded-lg mb-3 img-fluid" alt="イルカショー">
+            </div>
+        </article>
+        <article class="row">
+            <div class ="event-discription col-12 col-lg-4 order-1 order-lg-2 flex-lg-column justify-content-end">
+                <h3 class="card-title text-center py-3">もぐもぐタイム with penguins</h3>
+                <h5 class="card-text">今月のもぐもぐはペンギンのみんなだよ！和やかな餌やり体験、当日参加も大歓迎です。</h5>
+                <div class="d-flex justify-content-center justify-content-md-end py-2 pr-2">
+                        <button type="button" class="btn btn-block btn-lg-large  text-white" onclick="location.href='#'">もっと見る</button>
+                </div>
+                 <div class="event-image col-12 order-2 order-lg-1 ">
+                    <img src="penguin_2.jpg" class="rounded-lg mb-3 img-fluid" alt="...">
+                </div>
+            </div>
+            <div class="event-image col-12 col-lg-8 order-3 ">
+                <img src="penguin.jpg" class="mb-3 img-fluid" alt="ペンギン">
+            </div>
+        </article>
+        <article class="row jelly-fish">
+            <div class ="event-discription col-12 col-lg-4 order-1 order-lg-2 ">
+                <h4 class="card-title text-center my-2 d-md-flex justify-content-md-end d-md-flex justify-content-lg-center">特別展・クラゲの夢</h4>
+                <p class="card-text my-3 d-md-flex justify-content-md-end justify-content-lg-center text-md-end text-lg-center">光と音楽で彩られたクラゲの<br>幻想的な世界をお楽しみください！</p>
+                <h5 class="my-3 d-md-flex justify-content-md-end justify-content-lg-center">6/15~7/18</h5>
+                <div class="col-12 d-md-flex justify-content-md-end justify-content-lg-center py-3 pr-2">
+                    <button type="button" class="btn bg-info-subtle " onclick="location.href='#'">もっと見る</button>
+                </div>
+            </div>
+            <div class=" col-12 col-lg-4  order-2 order-lg-1 d-lg-flex ">
+                <img src="jellyfish.jpg" class="img-fluid mb-3" alt="クラゲ左">
+            </div>
+            <div class=" col-12 col-lg-4 d-none d-lg-flex order-3 order-lg-3">
+                <img src="jellyfish.jpg" class="img-fluid mb-3 jelly-fish-r" alt="クラゲ右">
+            </div>
+        </article>
+    </div>
+    <div class="container">
+        <h1 class="col pt-3 pb-1 text-center">開館スケジュール</h1>
+        <abbr class="row">
+        <table class="table text-center table-bordered col-12 tablerayout-fixed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="bg-info text-white">料金(通常)</th>
+                    <th class="bg-info text-white">料金<br>(特定期間の土日・祝日)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>大人(18歳以上)</td>
+                    <td>1,200円</td>
+                    <td>1,400円</td>
+                </tr>
+                <tr>
+                    <td>中高生</td>
+                    <td>1000円</td>
+                    <td>1200円</td>
+                </tr>
+                <tr>
+                    <td>こども(12歳以下)</td>
+                    <td>600円</td> 
+                    <td>800円</td>
+                </tr>
+
+                <tr>
+                    <td>シニア(65歳以上)</td>
+                    <td>1000円</td>
+                    <td>1200円</td>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="container">
+        <h1 class="col pt-3 pb-1 text-center">営業時間</h1>
+        <div class="row">
+        <table class="table text-center table-bordered col-12 tablerayout-fixed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-white">平日</th>
+                    <th class="text-white">土日祝</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>営業時間</td>
+                    <td>10:00-19:00</td>
+                    <td>9:30-19:30</td>
+                </tr>
+                <tr>
+                    <td>最終入館時間</td>
+                    <td>18:30</td>
+                    <td>19:00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-12 ">
+            <p>定休日：毎週火曜日（ただし祝日は除く）</p>
+            <p>メンテナンス休館することがございますので、あらかじめご了承ください。</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="col pt-3 pb-1 text-center">料金</h1>
+        <div class="row">
+        <table class="table text-center table-bordered col-12 tablerayout-fixed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-white">通常</th>
+                    <th class="text-white">特定期間の土日・祝日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>大人(18歳以上)</td>
+                    <td>1,200円</td>
+                    <td>1,400円</td>
+                </tr>
+                <tr>
+                    <td>中高生</td>
+                    <td>1000円</td>
+                    <td>1200円</td>
+                </tr>
+                <tr>
+                    <td>こども(12歳以下)</td>
+                    <td>600円</td> 
+                    <td>800円</td>
+                </tr>
+
+                <tr>
+                    <td>シニア(65歳以上)</td>
+                    <td>1000円</td>
+                    <td>1200円</td>
+            </tbody>
+        </table>
+        </div>
+        <p>※特定期間: 4/27-5/6、7/20-8/31、12/23-1/14、3/20-4/9</p>
+        <p>※20名以上の団体は2割引・障がい者手帳をお持ちの方は半額</p>
+        <p>※現金のほか、各種クレジットカード、コード決済、電子マネーをご利用いただけます。</p>
+  
+    </div>
+</div>
+</body>
 </html>
