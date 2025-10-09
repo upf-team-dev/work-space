@@ -248,3 +248,73 @@ body {
 .nav-buttons.disable-pointer {
   pointer-events: none;
 }
+
+
+.main-contents h1 {
+  color: #3683DC;
+}
+
+
+.news-image{
+    width:100%;
+    min-height: 150px;
+    display: block;
+    overflow: hidden;
+}
+
+.news-image img{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 4s ease;
+ 
+}
+
+.news-image:hover img{
+  transform: scale(2.0) !important;
+}
+
+
+
+
+.event-discription button{
+  background-color:#3683DC;
+}
+.event-image::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 15px 15px,#ffffff;
+}
+
+
+
+
+
+.jelly-fish { 
+    border-radius: 30px; 
+    margin:15px;
+    padding: 15px; /* 内側の余白 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影 */
+    background: linear-gradient(-225deg, #fff2fc 0%, #f0eefe 56%, #f1fcfe 100%);
+    text-align: center;
+}
+
+.jelly-fish-r{
+  transform: scale(-1, 1);
+}
+
+  /* 料金表 */
+
+
+.table{
+  font-size: 120%;
+  vertical-align: middle;
+}
+
+.table  th:nth-child(n+2){
+  background-color: #3683DC;
+}
