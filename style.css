@@ -1,54 +1,3 @@
-.container {
-    max-width: 900px;
-    width: 90%;
-}
-
-.sns {
-    background-color: #ffffff;
-}
-
-.sns h2 {
-    color: #176AE7;
-    font-size: 3rem;
-}
-
-#sns_icons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    gap: 0;
-}
-
-.sns-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.sns-item i {
-    font-size: 4.5rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-#info {
-    background-color: #56aefb;
-}
-
-address {
-    line-height: 1.8;
-    word-break: keep-all;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-=======
 /* リセット済みなので基本デザインから */
 body {
   font-family: 'Noto Sans JP', sans-serif;
@@ -247,4 +196,59 @@ body {
 }
 .nav-buttons.disable-pointer {
   pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+}
+
+.sns {
+    background-color: #ffffff;
+}
+
+.sns h2 {
+    color: #176AE7;
+    font-size: 3rem;
+}
+
+#sns_icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.sns-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.sns-item i {
+    font-size: 4.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#info {
+    background-color: #56aefb;
+}
+
+address {
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+#tel {
+    text-decoration: none;
+    color: inherit;
+}
+
+#info_logo {
+    width: 100%;
+    height: 100px;
 }
