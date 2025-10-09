@@ -202,6 +202,9 @@ body {
   color: #3683DC;
 }
 
+.main-contents a {
+    text-decoration: none; 
+    }
 
 .news-image{
     width:100%;
@@ -227,7 +230,9 @@ body {
 
 .event-discription button{
   background-color:#3683DC;
+  color:#eeeeee;
 }
+
 .event-image::after {
   position: absolute;
   content: '';
@@ -253,6 +258,11 @@ body {
 
 .jelly-fish-r{
   transform: scale(-1, 1);
+}
+
+.jelly-fish button{
+  background-color:#bffbff ;
+  color:#333333;
 }
 
   /* 料金表 */
