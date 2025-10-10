@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   margin: 0;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 .site-title img {
-  height: 120px; /* 実際より大きく見せるサイズ */
+  height: 120px; 
   object-fit: contain; /* 画像の比率を維持 */
   margin-bottom: -20px;  /* ロゴ下余白調整　*/
 }
@@ -55,7 +55,7 @@ body {
 #navi a {
   color: #333333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #navi.active {
@@ -128,8 +128,12 @@ body {
   height: 100%;
   transition: transform 0.6s ease;  /* スライドの動き */
 }
-
 /* 各スライド */
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .slider-container img {
   width: 100%;
   height: 100%;
@@ -148,7 +152,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   padding: 24px 20px 20px 20px;
-  font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -222,9 +226,9 @@ body {
   left: 50%;            /* 横中央　*/
   transform: translateX(-50%); /* 横中央に　*/
   display: flex;
-  gap: 10px;
+  justify-content: center; /* 中央揃え */
+  gap: 5px; /* ボタンの隙間　*/
   z-index: 50;
- 
 }
 
 .nav-buttons a,
@@ -458,4 +462,8 @@ address {
 #info_logo {
     width: 100%;
     height: 100px;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, a, button {
+  font-family: 'M PLUS 1p', sans-serif !important;
 }
