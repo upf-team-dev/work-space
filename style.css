@@ -283,13 +283,21 @@ body {
     width: 90%;
 }
 
+.map h2 {
+  color: #3683DC;
+  font-size: 2.5rem;
+  text-shadow: 1px 2px 1px #dcdcdc;
+}
+
 .sns {
     background-color: #ffffff;
 }
 
 .sns h2 {
-    color: #176AE7;
-    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(to right, #3ed4f6, #39aaf5);
+    background-clip: text;
+    font-size: 3.2rem;
 }
 
 #sns_icons {
@@ -306,12 +314,18 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: all 0.5s 0s ease;
 }
 
 .sns-item i {
     font-size: 4.5rem;
     display: block;
     margin-bottom: 10px;
+}
+
+.sns-item:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 #info {
