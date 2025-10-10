@@ -279,21 +279,13 @@ body {
 }
 
 
-
-
 .event-discription button{
   background-color:#3683DC;
   color:#eeeeee;
 }
 
-.event-image::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: inset 0 0 15px 15px,#ffffff;
+.event-image img{
+  border-radius: 0.4em;
 }
 
 
@@ -304,6 +296,63 @@ body {
   display: inline-block;
   font-weight: bold;
   color:#3683DC;
+}
+
+
+
+.jelly-fish { 
+    border-radius: 30px; 
+    margin:15px;
+    padding: 15px; /* 内側の余白 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影 */
+    background: linear-gradient(-225deg, #fff2fc 0%, #f0eefe 56%, #f1fcfe 100%);
+    text-align: center;
+}
+
+.jelly-fish-r{
+  transform: scale(-1, 1);
+}
+
+.jelly-fish button{
+  background-color:#bffbff ;
+  color:#333333;
+}
+
+.jf-anime{
+  border-radius: 0.5rem;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 10s;
+}
+
+.keyframel{
+  animation-name: anim_l;
+  transform: rotate(2deg);
+  animation-duration: 10s;
+}
+
+@keyframes anim_l {
+  41% {
+    transform: rotate(-1.5deg);
+  }
+  93% {
+    transform: rotate(1deg);
+  }
+}
+  .keyframer{
+  animation-name: anim_r;
+  transform: rotate(2deg);
+  animation-duration: 10s;
+}
+
+@keyframes anim_r {
+  77% {
+    transform: rotate(-2deg);
+  }
+  24% {
+    transform: rotate(1.5deg);
+  }
 }
 
 .read-more::before {
@@ -328,63 +377,6 @@ body {
 .read-more:hover::before {
   transform-origin: left top;
   transform: scale(1, 1);
-}
-
-
-
-.jelly-fish { 
-    border-radius: 30px; 
-    margin:15px;
-    padding: 15px; /* 内側の余白 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影 */
-    background: linear-gradient(-225deg, #fff2fc 0%, #f0eefe 56%, #f1fcfe 100%);
-    text-align: center;
-}
-
-.jelly-fish-r{
-  transform: scale(-1, 1);
-}
-
-.jelly-fish button{
-  background-color:#bffbff ;
-  color:#333333;
-}
-
-.jf-anime{
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 10s;
-}
-
-.keyframel{
-  animation-name: anim_l;
-  transform: rotate(2deg);
-  animation-duration: 10s;
-}
-
-@keyframes anim_l {
-  41% {
-    transform: rotate(-1.5deg);
-  }
-  93% {
-    transform: rotate(1deg);
-  }
-}
-  
-  .keyframer{
-  animation-name: anim_r;
-  transform: rotate(2deg);
-  animation-duration: 10s;
-}
-
-@keyframes anim_r {
-  77% {
-    transform: rotate(-2deg);
-  }
-  24% {
-    transform: rotate(1.5deg);
-  }
 }
 
 
