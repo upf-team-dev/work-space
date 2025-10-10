@@ -26,8 +26,9 @@
     <body>
         <header id="header">
             <h1 class="site-title">
-                <a href="index.html">大阪マリンワールド</a>
+                <img src="image/omw_logo.png" alt="大阪マリンワールドのロゴ">
             </h1>
+
      <nav id="navi">
                 <ul class="nav-menu"> <!-- ハンバーガー内ナヴメニュー　-->
                 <li><a href="#">HOME</a></li>
@@ -56,28 +57,31 @@
 
         <div class="slider"> <!-- スライダー -->
             <div class="slider-container">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/YUKI0211014_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/SHI_iwanouepengimure_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/PAK89_gyogunonagare20140719_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/tokunoshimaP6040066_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/063sayaka425_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/sayaka196171422_TP_V.jpg" alt="">
+                <img src="image/dolphin_2.jpg" alt="">
+                <img src="image/penguin.jpg" alt="">
+                <img src="image/sardine.jpeg" alt="">
+                <img src="image/Clownfish.jpeg" alt="">
+                <img src="image/Goby.jpeg" alt="">
+                <img src="image/sea_​​lion.jpg" alt="">
             </div>
           
             <div class="info-box">
-                <div class="info-item">
-                    <h2>営業日</h2>
-                    <p>本日営業中</p>           
-                </div>
-                <div class="info-item">
-                    <h2>本日のスケジュール</h2>
-                    <p>11:00 イルカショー<br>13:00 アシカショー</p>
-                </div>
-                <div class="info-item">
-                    <h2>次回休業日</h2>
-                    <p>10月30日(木)</p>               
-                </div>
+                <div class="open-date">本日の営業 </div>
+                <div class="open-time">09:30-16:30</div>
+                <div class="open-note">※入場は閉館の30分前まで</div>
+                <button class="schedule-btn">本日のスケジュール</button>
+                 <button class="holiday-btn">次回休園日　11/12(水)</button>
             </div>
+            <script>
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                const date = today.getDate();
+
+                const openDateEl = document.querySelector(".open-date");
+
+                openDateEl.textContent = `本日の営業 ${month}/${date}`;
+             </script>
+    
         </div>
 
         <div class="nav-buttons">
