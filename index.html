@@ -7,32 +7,39 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/de06da52e7.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
 
         <title>大阪マリンワールド　笑いと感動が泳ぐ海。</title>
         <meta name="description" content="ようこそ、大阪マリンワールドへ！子どもから大人まで、みんなが笑顔になれる「海のエンターテインメントパーク」です。">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="大阪マリンワールド　笑いと感動が泳ぐ海。">
         <meta property="og:description" content="ようこそ、大阪マリンワールドへ！子どもから大人まで、みんなが笑顔になれる「海のエンターテインメントパーク」です。">
-        <meta property="og:url" content="">
+        <meta property="og:url" content="#">
         <meta property="og:image" content="whale_shark.jpg">
         <meta property="og:image:width" content="1200px">
         <meta property="og:image:height" content="630px">
     </head>
     
     <body>
-        
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="index.js"></script>
-    </head>
-    <body>
+        <!-- ローディング画面 -->
+         <div id="loading_screen">
+            <div class="loading_content">
+                <img src="image/omw_logo.png" alt="大阪マリンワールドのロゴ" id="loading_logo">
+                <p class="catchphrase mt-2">　笑いと感動が泳ぐ海。</p>
+            </div>
+         </div>
+
         <header id="header">
             <h1 class="site-title">
-                <a href="index.html">大阪マリンワールド</a>
+                <img src="image/omw_logo.png" alt="大阪マリンワールドのロゴ">
             </h1>
+
      <nav id="navi">
                 <ul class="nav-menu"> <!-- ハンバーガー内ナヴメニュー　-->
                 <li><a href="#">HOME</a></li>
@@ -61,28 +68,31 @@
 
         <div class="slider"> <!-- スライダー -->
             <div class="slider-container">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/YUKI0211014_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/SHI_iwanouepengimure_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/PAK89_gyogunonagare20140719_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/tokunoshimaP6040066_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/063sayaka425_TP_V.jpg" alt="">
-                <img src="https://user0514.cdnw.net/shared/img/thumb/sayaka196171422_TP_V.jpg" alt="">
+                <img src="image/dolphin_2.jpg" alt="">
+                <img src="image/penguin.jpg" alt="">
+                <img src="image/sardine.jpeg" alt="">
+                <img src="image/Clownfish.jpeg" alt="">
+                <img src="image/Goby.jpeg" alt="">
+                <img src="image/sea_​​lion.jpg" alt="">
             </div>
           
             <div class="info-box">
-                <div class="info-item">
-                    <h2>営業日</h2>
-                    <p>本日営業中</p>           
-                </div>
-                <div class="info-item">
-                    <h2>本日のスケジュール</h2>
-                    <p>11:00 イルカショー<br>13:00 アシカショー</p>
-                </div>
-                <div class="info-item">
-                    <h2>次回休業日</h2>
-                    <p>10月30日(木)</p>               
-                </div>
+                <div class="open-date">本日の営業 </div>
+                <div class="open-time">09:30-16:30</div>
+                <div class="open-note">※入場は閉館の30分前まで</div>
+                <button class="schedule-btn">本日のスケジュール</button>
+                 <button class="holiday-btn">次回休園日　11/12(水)</button>
             </div>
+            <script>
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                const date = today.getDate();
+
+                const openDateEl = document.querySelector(".open-date");
+
+                openDateEl.textContent = `本日の営業 ${month}/${date}`;
+             </script>
+    
         </div>
 
         <div class="nav-buttons">
@@ -95,7 +105,6 @@
             <a href="#">よくある質問</a>
         </div>
       
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <div class="main-contents">
     <div class="container">
         <div class="row">
@@ -273,10 +282,12 @@
         <p>※20名以上の団体は2割引・障がい者手帳をお持ちの方は半額</p>
         <p class="pb-3">※現金のほか、各種クレジットカード、コード決済、電子マネーをご利用いただけます。</p>
     </div>
- </div>
-  <footer class="footer">
+</div>
+
+        <footer class="footer mt-5">
             <!-- 地図 -->
-            <div id="map" class="text-center">
+            <div class="map text-center pt-5">
+                <h2 class="mb-4">ACCESS</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6561.445314800737!2d135.52133974214223!3d34.6869485632875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d2a139a40d%3A0xf159015892e4d300!2z44CSNTQwLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65aSn6Ziq5Z-O77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1759743252086!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <!-- SNS -->
@@ -310,18 +321,18 @@
             <!-- 施設情報 -->
             <div id="info" class="text-center pt-5 pb-3">
                 <div class="container">
-                    <div class="row justify-content-around">
+                    <div class="row justify-content-around align-items-center">
                         <div class="col-lg-4 col-md-6 col-8 d-flex justify-content-center align-items-center">
                             <a href="#">
-                                <h4 style="color: #ffffff;">大阪マリンワールド</h4>
+                                <img src="/image/omw_logo.png" id="info_logo" alt="ロゴ">
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <address class="address text-md-left text-center" style="color: #ffffff;">
+                            <address class="address text-md-left text-center align-items-center" style="color: #ffffff;">
                                 〒540-0002 大阪府大阪市中央区大阪城1-1
                                 <br>
                                 TEL.
-                                <a href="#">06-0000-0000</a>
+                                <a href="#" id="tel">06-0000-0000</a>
                             </address>
                         </div>
                     </div>
