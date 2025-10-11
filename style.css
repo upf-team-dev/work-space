@@ -254,6 +254,7 @@ body {
 .main-contents h1 {
   color: #3683DC;
   font-weight: bold;
+  text-shadow: 1px 2px 3px #cecece;
 }
 
 .main-contents a {
@@ -279,42 +280,31 @@ body {
   transform: scale(2.0) !important;
 }
 
+
+
 .event-image img{
   border-radius: 0.4em;
 }
-
-.event-image .image-l {
-  animation: slideinLeft linear;
-  width: 100%;
-  transform-origin: left;
-  animation-timeline: scroll();
-}
-
-@keyframes slideinLeft {
-  0% {
-    transform: translateX(-1500px);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
   }
-  32% {
-    transform: translateX(0);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-
-.event-image .image-r {
-  animation: slideinRight linear;
-  width: 100%;
-  transform-origin: right;
-  animation-timeline: scroll();
+.event-image img {
+/* アニメーション設定 */
+  animation: fadeIn linear;
+  animation-timeline: view(); /* スクロールと連動 */
+  animation-range: entry 0% cover 30%;
 }
 
-@keyframes slideinRight {
-  0% {
-    transform: translateX(1500px);
-  }
-  25% {
-    transform: translateX(0);
-  }
-}
+/* スクロール用スペース */
+
 
 
 
@@ -377,6 +367,7 @@ body {
   display: inline-block;
   font-weight: bold;
   color:#3683DC;
+  text-shadow: 1px 2px 3px #cecece;
 }
 
 .read-more::before {
@@ -390,33 +381,42 @@ body {
   bottom: 0;
   transform: scale(0, 1);
   transform-origin: left top;
-  transition: all 2s ease;
+  transition:none;
   z-index: -1;
 }
 
 .read-more:hover {
   color:#ffffff;
+  text-shadow:none;
 }
 
 .read-more:hover::before {
   transform-origin: left top;
   transform: scale(1, 1);
+  transition:  all 2s ease;
 }
 
 
 
 
-.jelly-fish .read-more ::before {
-  background:#bffbff;
-  color:#333333;
+.jf-read-more::before {
+  background: #bffbff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:none;
+  z-index: -1;
 }
 
 .jelly-fish .read-more {
   color:#333333;
 }
-
-
-
 
   /* 料金表 */
 
@@ -426,7 +426,12 @@ body {
   vertical-align: middle;
 }
 
-.table  th:nth-child(n+2){
-  background-color:  #56aefb;
+.table  th:nth-child(2) {
+  background:linear-gradient(-225deg, #56aefb 0%,  #56c4fb 100%); 
 }
+
+.table  th:nth-child(3) {
+  background:linear-gradient(-225deg, #56c4fb 0%,  #56d2fb 100%); 
+}
+
 /*魚村担当分　ここまで*/
