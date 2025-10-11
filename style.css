@@ -303,8 +303,7 @@ body {
   animation-range: entry 0% cover 30%;
 }
 
-
-
+/*----クラゲアニメ-----*/
 .jelly-fish { 
     border-radius: 30px; 
     margin:15px;
@@ -355,6 +354,7 @@ body {
     transform: rotate(1.5deg);
   }
 }
+/*----クラゲアニメ----*/
 
 .read-more{
   position: relative;
