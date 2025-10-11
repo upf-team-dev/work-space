@@ -250,6 +250,7 @@ body {
 }
 
 
+/*魚村担当分　ここから*/
 .main-contents h1 {
   color: #3683DC;
   font-weight: bold;
@@ -428,3 +429,4 @@ body {
 .table  th:nth-child(n+2){
   background-color:  #56aefb;
 }
+/*魚村担当分　ここまで*/
