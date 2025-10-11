@@ -281,25 +281,43 @@ body {
   transform: scale(2.0) !important;
 }
 
-
-.event-discription button{
-  background-color:#3683DC;
-  color:#eeeeee;
-}
-
 .event-image img{
   border-radius: 0.4em;
 }
 
-
-.read-more{
-  position: relative;
-  z-index: 1;
-  padding: 0 10px;
-  display: inline-block;
-  font-weight: bold;
-  color:#3683DC;
+.event-image .image-l {
+  animation: slideinLeft linear;
+  width: 100%;
+  transform-origin: left;
+  animation-timeline: scroll();
 }
+
+@keyframes slideinLeft {
+  0% {
+    transform: translateX(-1500px);
+  }
+  32% {
+    transform: translateX(0);
+  }
+}
+
+
+.event-image .image-r {
+  animation: slideinRight linear;
+  width: 100%;
+  transform-origin: right;
+  animation-timeline: scroll();
+}
+
+@keyframes slideinRight {
+  0% {
+    transform: translateX(1500px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+}
+
 
 
 
@@ -316,10 +334,6 @@ body {
   transform: scale(-1, 1);
 }
 
-.jelly-fish button{
-  background-color:#bffbff ;
-  color:#333333;
-}
 
 .jf-anime{
   border-radius: 0.5rem;
@@ -358,6 +372,15 @@ body {
   }
 }
 
+.read-more{
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+  color:#3683DC;
+}
+
 .read-more::before {
   background: #3683DC;
   content: "";
@@ -384,6 +407,19 @@ body {
 
 
 
+
+.jelly-fish .read-more ::before {
+  background:#bffbff;
+  color:#333333;
+}
+
+.jelly-fish .read-more {
+  color:#333333;
+}
+
+
+
+
   /* 料金表 */
 
 
@@ -393,8 +429,7 @@ body {
 }
 
 .table  th:nth-child(n+2){
-  background-color: #3683DC;
-}
+  background-color:  #56aefb;
 
 /* ここから秋村 */
 #loading_screen {
