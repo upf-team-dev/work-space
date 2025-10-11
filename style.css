@@ -308,6 +308,7 @@ body {
   animation-range: entry 0% cover 30%;
 }
 
+/*----クラゲ-----*/
 .jelly-fish { 
     border-radius: 30px; 
     margin:15px;
@@ -320,7 +321,6 @@ body {
 .jelly-fish-r{
   transform: scale(-1, 1);
 }
-
 
 .jf-anime{
   border-radius: 0.5rem;
@@ -357,8 +357,7 @@ body {
   24% {
     transform: rotate(1.5deg);
   }
-}
-
+/*----クラゲ-----*/
 .read-more{
   position: relative;
   z-index: 1;
