@@ -243,7 +243,7 @@ body {
 .nav-buttons.disable-pointer {
   pointer-events: none;
 }
-/* 長谷川担当　ここまで　
+/* 長谷川担当　ここまで　*/
 
 /*魚村担当分　ここから*/
 
@@ -276,11 +276,10 @@ body {
   transform: scale(2.0) !important;
 }
 
-
-
 .event-image img{
   border-radius: 0.4em;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -349,6 +348,7 @@ body {
     transform: rotate(1.5deg);
   }
   
+  
 }
 /*----クラゲアニメ----*/
 
@@ -387,9 +387,32 @@ body {
   transform: scale(1, 1);
   transition:  all 2s ease;
 }
+/*----クラゲアニメ----*/
 
+.read-more{
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+  color:#3683DC;
+  text-shadow: 1px 2px 3px #cecece;
+}
 
-
+.read-more::before {
+  background: #3683DC;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:none;
+  z-index: -1;
+}
 
 .jf-read-more::before {
   background: #bffbff;
@@ -409,7 +432,6 @@ body {
 .jelly-fish .read-more {
   color:#333333;
 }
-
 
   /* 料金表 */
 .table{
