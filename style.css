@@ -161,7 +161,20 @@ body {
   margin: 0;
 }
 
-
+.schedule-btn,
+.holiday-btn {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
 
 .schedule-btn {
   background: linear-gradient(90deg, #2545e8 0%, #3f75ef 100%);
@@ -369,11 +382,7 @@ body {
   }
 }
 
-
-
   /* 料金表 */
-
-
 .table{
   font-size: 120%;
   vertical-align: middle;
