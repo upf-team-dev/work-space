@@ -422,6 +422,10 @@ body {
   vertical-align: middle;
 }
 
+.table th{
+  width: 33%;
+}
+
 .table  th:nth-child(2) {
   background:linear-gradient(-225deg, #56aefb 0%,  #56c4fb 100%); 
 }
