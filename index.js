@@ -8,6 +8,7 @@ $(function() {
     $(this).toggleClass('active');
     $navi.toggleClass('active');
     $mask.toggleClass('active');
+
     // メニュー開いた時はボタン無効
     if ($navi.hasClass('active')) {
       $('.nav-buttons').css('pointer-events', 'none');
@@ -23,7 +24,7 @@ $(function() {
     $mask.removeClass('active');
     $('.nav-buttons').css('pointer-events', '');
   });
-
+  
   // ナビ内リンククリックで閉じる
   $('#navi a').on('click', function() {
     $hamburger.removeClass('active');
