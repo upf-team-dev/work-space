@@ -1,29 +1,23 @@
-/* リセット済みなので基本デザインから */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   margin: 0;
 }
-
+/* 長谷川担当　*/
 /* headerエリア */
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: #1EB5FF;
-  padding: 5px 20px; /*　上下、左右　*/
+   background: linear-gradient(to right, #3683DC, #84F5F9);
+  padding: 20px 30px; /*　上下、左右　*/
   color: #daf8ff;
 }
 
 .site-title img {
-  height: 40px;
-}
-
-.site-title a {
-  color: #ffffff;   
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: bold;
+  height: 120px; 
+  object-fit: contain; /* 画像の比率を維持 */
+  margin-bottom: -20px;  /* ロゴ下余白調整　*/
 }
 
 /* ナビゲーション */
@@ -40,11 +34,6 @@ body {
   transition: right 0.3s ease;
   z-index: 200;
 }
-#navi ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
 
 #navi li {
   margin-bottom: 15px;
@@ -53,7 +42,7 @@ body {
 #navi a {
   color: #333333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #navi.active {
@@ -74,7 +63,7 @@ body {
 .hamburger span {
   display: block;
   height: 3px;
-  background: #84F5F9;
+  background: #3683DC;
   border-radius: 3px;
   transition: all 0.4s ease;
   transform-origin: center;
@@ -126,50 +115,107 @@ body {
   height: 100%;
   transition: transform 0.6s ease;  /* スライドの動き */
 }
-
 /* 各スライド */
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .slider-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* 縦横比を保って埋める */
+  object-fit: cover;   /* 縦横比を保つ */
   flex-shrink: 0;      /* 縮まないように固定 */
 }
 
+/* インフォボックス */
 .info-box {
-    position: absolute;
-    top: 20px; /* スライダー内での位置調整 */
-    left: 20px;
-    background: rgba(255,255,255,0.85);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 9px rgba(24, 24, 73, 0.1);
-    display: flex;
-    gap: 24px;
-    z-index: 2; /* 画像より前面に */
+  position: absolute;      /* スライダーの上に重ねる */
+  top: 20px;               /* 画像の上部から20px */
+  left: 20%;   /* 左から　*/
+  transform: translateX(-50%);
+  z-index: 10;             /* 前面に表示 */
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 24px 20px 20px 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .info-item {
-    min-width: 60px;
-    margin-right: 7px;
+    margin-bottom: 16px;
 }
-
 .info-item h2 {
-    font-size: 1.1em;
-    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
     color: #3683DC;
 }
+.info-item p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.schedule-btn,
+.holiday-btn {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.schedule-btn {
+  background: linear-gradient(90deg, #2545e8 0%, #3f75ef 100%);
+}
+
+.holiday-btn {
+  background: linear-gradient(90deg, #17c7ec 0%, #43e6de 100%);
+  margin-bottom: 0;
+}
+
+/* 営業日と営業時間部分 */
+.open-date {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.open-time {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.open-note {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
 
 /* 常設ボタンのデザイン */ 
 
 .nav-buttons {
   position: absolute;   
-  top: 570px;           /* 上から20pxの位置 */
+  top: 600px;           /* 上からの位置 */
   left: 50%;            /* 横中央　*/
   transform: translateX(-50%); /* 横中央に　*/
   display: flex;
-  gap: 10px;
+  justify-content: center; /* 中央揃え */
+  gap: 5px; /* ボタンの隙間　*/
   z-index: 50;
- 
 }
 
 .nav-buttons a,
@@ -197,10 +243,14 @@ body {
 .nav-buttons.disable-pointer {
   pointer-events: none;
 }
+/* 長谷川担当　ここまで　
+
+/*魚村担当分　ここから*/
 
 .main-contents h1 {
   color: #3683DC;
   font-weight: bold;
+  text-shadow: 1px 2px 3px #cecece;
 }
 
 .main-contents a {
@@ -228,58 +278,28 @@ body {
 
 
 
-
-.event-discription button{
-  background-color:#3683DC;
-  color:#eeeeee;
+.event-image img{
+  border-radius: 0.4em;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.event-image::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: inset 0 0 15px 15px,#ffffff;
+.event-image img {
+/* アニメーション設定 */
+  animation: fadeIn linear;
+  animation-timeline: view(); /* スクロールと連動 */
+  animation-range: entry 0% cover 30%;
 }
 
-
-.read-more{
-  position: relative;
-  z-index: 1;
-  padding: 0 10px;
-  display: inline-block;
-  font-weight: bold;
-  color:#3683DC;
-}
-
-.read-more::before {
-  background: #3683DC;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: all 2s ease;
-  z-index: -1;
-}
-
-.read-more:hover {
-  color:#ffffff;
-}
-
-.read-more:hover::before {
-  transform-origin: left top;
-  transform: scale(1, 1);
-}
-
-
-
+/*----クラゲアニメ-----*/
 .jelly-fish { 
     border-radius: 30px; 
     margin:15px;
@@ -293,12 +313,8 @@ body {
   transform: scale(-1, 1);
 }
 
-.jelly-fish button{
-  background-color:#bffbff ;
-  color:#333333;
-}
-
 .jf-anime{
+  border-radius: 0.5rem;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -319,7 +335,6 @@ body {
     transform: rotate(1deg);
   }
 }
-  
   .keyframer{
   animation-name: anim_r;
   transform: rotate(2deg);
@@ -333,26 +348,160 @@ body {
   24% {
     transform: rotate(1.5deg);
   }
+  
+}
+/*----クラゲアニメ----*/
+
+.read-more{
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+  color:#3683DC;
+  text-shadow: 1px 2px 3px #cecece;
+}
+
+.read-more::before {
+  background: #3683DC;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:none;
+  z-index: -1;
+}
+
+.read-more:hover {
+  color:#ffffff;
+  text-shadow:none;
+}
+
+.read-more:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  transition:  all 2s ease;
 }
 
 
 
+
+.jf-read-more::before {
+  background: #bffbff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition:none;
+  z-index: -1;
+}
+
+.jelly-fish .read-more {
+  color:#333333;
+}
+
+
   /* 料金表 */
-
-
 .table{
   font-size: 120%;
   vertical-align: middle;
 }
 
-.table  th:nth-child(n+2){
-  background-color: #3683DC;
+.table th{
+  width: 33%;
 }
 
+.table  th:nth-child(2) {
+  background:linear-gradient(-225deg, #56aefb 0%,  #56c4fb 100%); 
+}
+
+.table  th:nth-child(3) {
+  background:linear-gradient(-225deg, #56c4fb 0%,  #56d2fb 100%); 
+}
+
+/*魚村担当分　ここまで*/
+
 /* ここから秋村 */
+#loading_screen {
+  position: fixed;
+  inset: 0;
+  background-image: url("image/loading_screen.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#loading_screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 80, 150, 0.35);
+  z-index: 1;
+}
+
+.loading_content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+#loading_logo {
+  margin-bottom: 0;
+  width: 100%;
+  height: 110px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.catchphrase {
+  font-size: 1.4rem;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 0.4em;
+  text-shadow: 1px 2px 2px rgb(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2.5s 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
     max-width: 900px;
     width: 90%;
+}
+
+.map h2 {
+  color: #3683DC;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 1px 2px 2px rgb(0, 0, 0, 0.2);
 }
 
 .sns {
@@ -360,8 +509,11 @@ body {
 }
 
 .sns h2 {
-    color: #176AE7;
-    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(to right, #3ed4f6, #39aaf5);
+    background-clip: text;
+    font-size: 3.2rem;
+    font-weight: 600;
 }
 
 #sns_icons {
@@ -378,12 +530,18 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: all 0.5s 0s ease;
 }
 
 .sns-item i {
     font-size: 4.5rem;
     display: block;
     margin-bottom: 10px;
+}
+
+.sns-item:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 #info {
@@ -402,5 +560,6 @@ address {
 
 #info_logo {
     width: 100%;
-    height: 100px;
+
+    height: 70px;
 }
