@@ -66,3 +66,14 @@ $(function() {
 // 自動再生
   setInterval(showNextSlide, 3000);
 });
+
+// ローディング画面
+window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loading_screen");
+  setTimeout(() => {
+    loadingScreen.style.opacity = "0";
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+    }, 1000);
+  }, 2600)
+});
