@@ -3,7 +3,7 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
   margin: 0;
 }
-
+/* 長谷川担当　*/
 /* headerエリア */
 #header {
   display: flex;
@@ -21,13 +21,6 @@ body {
   margin-bottom: -20px;  /* ロゴ下余白調整　*/
 }
 
-.site-title a {
-  color: #ffffff;   
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: bold;
-}
-
 /* ナビゲーション */
 #navi {
   position: fixed;
@@ -41,11 +34,6 @@ body {
   box-sizing: border-box;
   transition: right 0.3s ease;
   z-index: 200;
-}
-#navi ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
 }
 
 #navi li {
@@ -141,6 +129,7 @@ body {
   flex-shrink: 0;      /* 縮まないように固定 */
 }
 
+/* インフォボックス */
 .info-box {
   position: absolute;      /* スライダーの上に重ねる */
   top: 20px;               /* 画像の上部から20px */
@@ -160,7 +149,6 @@ body {
 .info-item {
     margin-bottom: 16px;
 }
-
 .info-item h2 {
     font-size: 16px;
     font-weight: bold;
@@ -222,7 +210,7 @@ body {
 
 .nav-buttons {
   position: absolute;   
-  top: 570px;           /* 上から20pxの位置 */
+  top: 600px;           /* 上からの位置 */
   left: 50%;            /* 横中央　*/
   transform: translateX(-50%); /* 横中央に　*/
   display: flex;
@@ -256,7 +244,7 @@ body {
 .nav-buttons.disable-pointer {
   pointer-events: none;
 }
-
+/* 長谷川担当　ここまで　
 
 /*魚村担当分　ここから*/
 
@@ -365,7 +353,6 @@ body {
 }
 /*----クラゲアニメ----*/
 
-
 .read-more{
   position: relative;
   z-index: 1;
@@ -424,9 +411,8 @@ body {
   color:#333333;
 }
 
+
   /* 料金表 */
-
-
 .table{
   font-size: 120%;
   vertical-align: middle;
