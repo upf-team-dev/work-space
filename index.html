@@ -9,10 +9,13 @@
         <script src="https://kit.fontawesome.com/de06da52e7.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
 
         <title>大阪マリンワールド　笑いと感動が泳ぐ海。</title>
         <meta name="description" content="ようこそ、大阪マリンワールドへ！子どもから大人まで、みんなが笑顔になれる「海のエンターテインメントパーク」です。">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="大阪マリンワールド　笑いと感動が泳ぐ海。">
@@ -24,6 +27,14 @@
     </head>
     
     <body>
+        <!-- ローディング画面 -->
+         <div id="loading_screen">
+            <div class="loading_content">
+                <img src="image/omw_logo.png" alt="大阪マリンワールドのロゴ" id="loading_logo">
+                <p class="catchphrase mt-2">　笑いと感動が泳ぐ海。</p>
+            </div>
+         </div>
+
         <header id="header">
             <h1 class="site-title">
                 <img src="image/omw_logo.png" alt="大阪マリンワールドのロゴ">
@@ -121,7 +132,7 @@
                     <div class="card-body">
                         <h6 class="text-secondary text-end">2025.09.30</h6>
                         <h5 class="card-title overflow-hidden">フォトコンテスト結果発表</h5>
-                        <p class="card-text">GW期間中に開催したフォトコンテストには、たくさんの方々のご参加ありがとうございました。厳正なる審査の上、映えある一位は.....</p>
+                        <p class="card-text">夏休み期間中に開催したフォトコンテストには、たくさんの方々のご参加ありがとうございました。厳正なる審査の上、映えある一位は.....</p>
                         <a href="#"><p class ="text-secondary text-end">続きを読む</p></a>
                     </div>
                 </div>
@@ -132,47 +143,51 @@
                         <img src="image/sea_​​lion.jpg" class="card-img-top" alt="アシカ">
                     </a>
                     <div class="card-body">
-                        <h6 class="text-secondary text-end">2025.7.01</h6>
+                        <h6 class="text-secondary text-end">2025.9.15</h6>
                         <h5 class="card-title overflow-hidden">イベントスケジュール更新</h5>
-                        <p class="card-text">夏休み期間(7/20~8/31)を中心に5月末までのイベントスケジュールを掲載しております。今年もGWは全日営業します！</p>
+                        <p class="card-text">10月末までのイベントスケジュールを掲載しました。今年もハロウィンは特別企画が目白押し！一部日程で夜の延長営業もします！</p>
                         <a href="#"><p class ="text-secondary text-end">続きを読む</p></a>
                     </div>
                 </div>
             </article>
         </div>
     </div>
-    <div class="container">
+    <div class="container event">
         <h1 class="col pt-3 pb-1 text-center">イベント</h1>
         <article class="row">
              <div class ="event-discription col-12 col-lg-4 order-1 order-lg-2 d-lg-flex flex-lg-column">
                 <div class = "col-12 order-1 order-lg-2" >
                     <h3 class="card-title text-center py-3">ダイナミック イルカショー</h3>
                     <h5 class="card-text">大阪マリンワールドの名物といえばコレ、ゲスト参加型のイルカショーです。大迫力のパフォーマンスをぜひご覧ください！！</h5>
-                    <div class="d-flex justify-content-center justify-content-md-end py-2 pr-2">
-                        <button type="button" class="btn btn-block btn-lg-large" onclick="location.href='#'">もっと見る</button>
+                    <div class="d-flex justify-content-center justify-content-lg-end py-2 pr-2">
+                        <a href = "#" class="col-4 col-lg-5 text-center">
+                            <h5 class ="read-more my-3 ">もっと見る</h5>
+                        </a>
                     </div>
                 </div>
                 <div class="event-image col-12 order-2 order-lg-1">
-                    <img src="image/dolphin_2.jpg" class="rounded-lg mb-3 img-fluid" alt="...">
+                    <img src="image/dolphin_2.jpg" class="mb-3 img-fluid event-img-r" alt="イルカ">
                 </div>
             </div>
-            <div class="event-image col-12 col-lg-8 order-3 order-lg-1 ">
-                <img src="image/dolphin.png" class="rounded-lg mb-3 img-fluid" alt="イルカショー">
+             <div class="event-image col-12 col-lg-8 order-3 order-lg-1 ">
+                <img src="image/dolphin.png" class=" mb-3 img-fluid event-img-l" alt="イルカショー">
             </div>
         </article>
         <article class="row">
             <div class ="event-discription col-12 col-lg-4 order-1 order-lg-2 flex-lg-column justify-content-end">
                 <h3 class="card-title text-center py-3">もぐもぐタイム with penguins</h3>
                 <h5 class="card-text">今月のもぐもぐはペンギンのみんなだよ！和やかな餌やり体験、当日参加も大歓迎です。</h5>
-                <div class="d-flex justify-content-center justify-content-md-end py-2 pr-2">
-                    <button type="button" class="btn btn-block btn-lg-large" onclick="location.href='#'">もっと見る</button>
-                </div>
-                 <div class="event-image col-12 order-2 order-lg-1 ">
-                    <img src="image/penguin_2.jpg" class="rounded-lg mb-3 img-fluid" alt="...">
+                <div class="d-flex justify-content-center justify-content-lg-end py-2 pr-2">
+                   <a href = "#" class="col-4 col-lg-5 text-center">
+                        <h5 class ="read-more my-3">もっと見る</h5>
+                    </a>
+                 </div>
+                 <div class="event-image col-12 order-2 order-lg-1">
+                    <img src="image/penguin_2.jpg" class=" mb-3 img-fluid event-img-l"  alt="泳ぐペンギン">
                 </div>
             </div>
-            <div class="event-image col-12 col-lg-8 order-3 ">
-                <img src="image/penguin.jpg" class="mb-3 img-fluid" alt="ペンギン">
+            <div class="event-image col-12 col-lg-8 order-3">
+                <img src="image/penguin.jpg" class="mb-3 img-fluid event-img-r" alt="Several penguins standing together on a rocky surface, looking alert and attentive, with a background of large gray stone formations creating a naturalistic and calm environment">
             </div>
         </article>
         <article class="row jelly-fish">
@@ -181,19 +196,21 @@
                 <p class="card-text my-3 d-md-flex justify-content-md-end justify-content-lg-center text-md-end text-lg-center py-lg-2">光と音楽で彩られたクラゲの<br>幻想的な世界をお楽しみください！</p>
                 <h5 class="my-3 d-md-flex justify-content-md-end justify-content-lg-center">10/15~11/18</h5>
                 <div class="col-12 d-md-flex justify-content-md-end justify-content-lg-center py-3 pr-2">
-                    <button type="button" class="btn btn-block btn-lg-large " onclick="location.href='#'">もっと見る</button>
+                    <a href = "#" class="col-4  col-md-5 col-lg-7 text-center text-md-end text-lg-center">
+                        <h5 class ="read-more jf-read-more my-1 my-lg-3">もっと見る</h5>
+                    </a>
                 </div>
             </div>
             <div class=" col-12 col-lg-4  order-2 order-lg-1 d-lg-flex ">
                 <img src="image/jellyfish.jpg" class="jf-anime keyframel  img-fluid mb-3" alt="クラゲ左">
             </div>
-            <div class=" col-12 col-lg-4 d-none d-lg-flex order-3 order-lg-3">
-                <img src="image/jellyfish.jpg" class="jf-anime keyframer  img-fluid mb-3 jelly-fish-r" alt="クラゲ右">
+            <div class=" col-12 col-lg-4 d-none d-lg-flex order-3 order-lg-3 jelly-fish-r">
+                <img src="image/jellyfish.jpg" class=" jf-anime keyframer  img-fluid mb-3 " alt="クラゲ右">
             </div>
         </article>
         <div class ="py-3 row d-flex justify-content-end" >
-            <a href = "#" class="col-6 col-md-5 col-lg-4 col-3">
-                <h4 class ="read-more my-3">イベントをもっと見る<h4>
+            <a href = "#" class="col-7 col-md-5 col-lg-4 col-3">
+                <h4 class ="read-more my-3">イベントをもっと見る</h4>
             </a>
         </div>
     </div>
@@ -267,9 +284,10 @@
     </div>
 </div>
 
-        <footer class="footer">
+        <footer class="footer mt-5">
             <!-- 地図 -->
-            <div id="map" class="text-center">
+            <div class="map text-center pt-5">
+                <h2 class="mb-4">ACCESS</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6561.445314800737!2d135.52133974214223!3d34.6869485632875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d2a139a40d%3A0xf159015892e4d300!2z44CSNTQwLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65aSn6Ziq5Z-O77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1759743252086!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <!-- SNS -->
